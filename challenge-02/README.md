@@ -111,9 +111,9 @@ return 'null';
 }  
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
-verificar (1,2,3);
-verificar(5,4);
-verificar(2);
-verificar();
+verificar (1,2,3); //1
+verificar(5,4);  //9
+verificar(2); //2
+verificar(); //undefined
 
 ```
