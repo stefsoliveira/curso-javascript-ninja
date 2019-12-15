@@ -41,11 +41,10 @@ Crie uma função com as seguintes características:
 3. O retorno da função deve ser a multiplicação dos 3 argumentos, somando `2` ao resultado da multiplicação.
 */
 function novafuncao (a, b, c){
-  if (a==null || b==null || c==null){
+  if (a===undefined || b===undefined || c===undefined){
     return ' Preencha todos os valores corretamente!'
     } else{
-    var resultao = a*b*c;
-    return resultado + 2;
+    return (a * b * c) + 2;
     }
   }
 
@@ -71,42 +70,17 @@ Crie uma função com as seguintes características:
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
 > function verificar (a, b, c){                                                   
-... //condicao= todos tem valor                                                    
-... if (a!=null && b!=null && c!=null){                                            
-var resultado = a+b;                                                         
-..... return resultado/c;                                                          
+... if (a !== undefined && b === undefined && c === undefined){                         
+..... return a;                                                                   
 ..... }                                                                            
-... //condicao= só o a tem valor                                                   
-... else if (a!==null && b==null && c==null){                                      
-..... return a;                                                                    
-..... }                                                                            
-... //condicao =  so o b tem valor                                                 
-... else if (a===null && b!=null && c==null){                                      
+... else if (a !== undefined && b !== undefined && c === undefined){                    
 ..... return b;                                                                    
+..... }                                                                                  ... else if (a!== undefined && b !== undefined && c !== undefined){                     .... return (a+b)/c;
+... else if (a === undefined && b === undefined && c === undefined){
+..... return false;
 ..... }                                                                            
-... //condicao= so o c tem valor                                                   
-... else if (a===null && b==null && c!=null){                                      
-..... return c;                                                                    
-..... }                                                                            
-... //condicao = 2 tem valores                                                     
-... else if (a===null && b!=null && c!=null){                                      
-..... return b+c;                                                                  
-..... }                                                                            
-... //condicao = 2 tem valores                                                     
-... else if (a!==null && b==null && c!=null){                                     
-..... return a+c;                                                                  
-..... }                                                                            
-... //condicao = 2 tem valores                                                     
-... else if (a!==null && b!=null && c==null){                                      
-..... return a+b;                                                                  
-..... }                                                                            
-... //condicao = nenhum tem valor                                                  
-... else if (a==null && b==null && c==null){                                       
-...  return 'false';                                                                
-..... }                                                                            
-... // condicao = nenhuma atendida                                                 
 else {                                                                         
-return 'null';                                                              
+return null;                                                              
 }                                                                            
 }  
 
